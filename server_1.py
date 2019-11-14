@@ -18,8 +18,6 @@ def handler(buf, conn):
     elif cmd == 'STAT':
         stat_fun(tmp, conn)
 
-
-
 def process_request(conn, addr):
     print("connected client:", addr)
     buf = []
@@ -67,7 +65,6 @@ with socket.socket() as sock:
         workers_count = 3
         workers_list = [multiprocessing.Process(target=worker, args=(sock,))
                         for _ in range(workers_count)]
-        
         for w in workers_list:
             w.start()
         
