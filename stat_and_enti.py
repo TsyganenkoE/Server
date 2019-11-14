@@ -16,8 +16,6 @@ def enti_fun(tmp, conn):
         conn.sendall(('endofthetwit;').encode("ISO8859-1"))
     conn.sendall(('allend').encode("ISO8859-1"))
 
-
-
 def search_the_most_popular_word(all_words, res_list):
     """TOP TEN WORDS"""
     max_repeat = max_index = i_index = 0
